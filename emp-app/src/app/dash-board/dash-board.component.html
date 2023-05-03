@@ -1,0 +1,28 @@
+<div class="container">
+    <br>
+
+    <table class="table table-striped">
+        <thead>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>Type</th>
+            <th>Work days</th>
+            <th>Max Vacation days</th>
+            <th>Actions</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let e of emps">
+                <td>{{e.id}}</td>
+                <td>{{e.name}}</td>
+                <td>{{e.type}}</td>
+                <td>{{e.workDays}}</td>
+                <td>{{e.maxVacationdays}}</td>
+                <td>
+                    <a routerLink="/addWorkDays" [queryParams]="{id: e.id}" class="btn btn-warning">Add Work Days</a>
+                    &nbsp;
+                    <a routerLink="/takeVacations" [queryParams]="{id: e.id}" class="btn btn-success">Take Vacation</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+
+    <h1>Take Vacations</h1>
+
+    <div class="container" id="formDiv">
+        <form #addEmpForm="ngForm">
+
+            <label for="name">ID</label>
+            <input type="number" name="id" id="id" [(ngModel)]="selectedEmp.id" class="form-control" readonly> <br>
+
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" [(ngModel)]="selectedEmp.name" class="form-control" readonly> <br>
+
+            <label for="name">Employee Type</label>
+            <input type="text" name="type" id="type" [(ngModel)]="selectedEmp.type" class="form-control" readonly> <br>
+
+            <label for="name">Vacation days</label>
+            <input type="number" name="salary" id="salary" [(ngModel)]="selectedEmp.maxVacationdays" class="form-control"> <br>
+
+
+            <input type="button" value="Update" (click)="takeVacation()" class="btn btn-warning">
+        </form>
+    </div>
+    <!-- {{addEmpForm.value | json}} -->
+</div>
